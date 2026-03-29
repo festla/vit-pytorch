@@ -85,7 +85,7 @@ class FeedForward(Module):
 
     def forward(self, x):
         normed = self.norm(x)
-        return self.net(x), normed
+        return self.net(x), normed    # here should be return self.net(normed), normed
 
 class Attention(Module):
     def __init__(self, dim, heads = 8, dim_head = 64, dropout = 0.):
